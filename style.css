@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #f5f5f5;
+  color: #333;
+}
+
+h1 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+#game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+#status {
+  font-size: 1.25rem;
+  font-weight: 600;
+  min-height: 1.5em;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 4px;
+  background: #333;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  font-size: 2.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.15s;
+}
+
+.cell:hover {
+  background: #e8e8e8;
+}
+
+.cell.occupied {
+  cursor: default;
+  background: #fafafa;
+}
+
+.cell.occupied:hover {
+  background: #fafafa;
+}
+
+#restart {
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 2px solid #333;
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+#restart:hover {
+  background: #333;
+  color: #fff;
+}
